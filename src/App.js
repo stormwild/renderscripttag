@@ -5,6 +5,7 @@ function App() {
   const danger = '<script>alert("Hello world!")</script>';
 
   useEffect(() => {
+    // @TODO use a ref instead
     const el = document.querySelector('.danger');
     el.appendChild(document.createRange().createContextualFragment(danger));
   }, []);
